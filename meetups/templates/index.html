@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first web page</title>
+    <link rel="styleshet" href="{% static 'meetups/styles/base.css' %}">
+</head>
+<body>
+
+    <h1>All meetups!</h1>
+    <p>Hello World</p>
+    {% if show_meetups %}
+     <h2>{{met.1.title  }}</h2>
+     
+    {% else %}
+    <p> No meetups found! </p>
+    {% endif %}
+</body> 
+</html>

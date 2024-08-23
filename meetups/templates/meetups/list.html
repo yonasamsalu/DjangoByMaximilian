@@ -1,0 +1,36 @@
+
+
+{% extends 'meetups/base/base.html'%}
+{% load static %}
+
+{% block title %} my first web page {% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}"/>
+{% endblock %}
+
+{% block main_heading %} 
+   We got great meetups coming up!
+{% endblock %}
+
+{% block header_content %} 
+  Find the one that suits your need!
+{% endblock %}
+
+{% block body %} 
+<section>
+  <h2>upcoming meetups</h2>
+  <ol>
+    {% for meetup_item in meetups %}
+      {% include 'meetups/includes/meetup-item.html' with title=meetup_item.title image=meetup_item.image.url location='Gondar' slug=meetup_item.slug %}
+    {% endfor %}
+  </ol>
+</section>
+
+{% endblock %}
+
+
+
+
+
+

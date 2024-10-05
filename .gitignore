@@ -1,4 +1,5 @@
 
-__pycache__/
-asgi.py
-settings
+
+__pycache__
+uploads/images/
+meetups/migrations
